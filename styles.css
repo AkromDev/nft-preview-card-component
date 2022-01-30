@@ -51,16 +51,17 @@ a {
 /* Styles */
 
 body {
-  position: relative;
   font-family: "Outfit", sans-serif;
   color: var(--clr-primary-soft-blue);
   font-size: 18px;
   line-height: 1.4444;
   min-height: 100vh;
   background-color: var(--clr-neutral-dark-main);
+  padding: 20px;
 }
 
 .card {
+  position: relative;
   background-color: var(--clr-neutral-dark-card);
   width: var(--card-width);
   border-radius: var(--border-radius);
@@ -143,10 +144,11 @@ body {
   color: var(--clr-primary-cyan);
 }
 .attribution {
+  position: absolute;
   font-size: 11px;
   text-align: center;
-  padding: 20px;
-  /* margin-top: auto; */
+  transform: translateY(50px);
+  padding-bottom: 30px;
 }
 .attribution a {
   color: var(--clr-primary-cyan);
@@ -157,9 +159,6 @@ body {
     --card-width: 327px;
   }
 
-  body {
-    padding: 20px;
-  }
   .card {
     max-width: var(--card-width);
     width: 100%;
