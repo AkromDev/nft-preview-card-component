@@ -96,7 +96,7 @@ body{
 }
 
 .card-description{
-    margin-top: var(--separator);
+    margin-top: var(--separator-small);
     font-weight: var(--font-light);
     color: var(--clr-primary-soft-blue);
 }
