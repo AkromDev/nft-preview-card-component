@@ -17,9 +17,10 @@
     --font-bold: 600;
 
     --border-radius: 15px;
-    --spacing: 24px;
-    --spacing-small: 16px;
+    --separator: 24px;
+    --separator-small: 16px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -37,12 +38,24 @@ a {
     flex-direction: column;
 }
 
+.text-large{
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.text-small{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Styles */
+
 body{
     position: relative;
     font-family: 'Outfit', sans-serif;
     color: var(--clr-primary-soft-blue);
     font-size: 18px;
-    line-height: 26px;
+    line-height: 1.4444;
     min-height: 100vh;
     background-color: var(--clr-neutral-dark-main);
 }
@@ -51,7 +64,7 @@ body{
     background-color: var(--clr-neutral-dark-card);
     width: var(--card-width);
     border-radius: var(--border-radius);
-    padding: var(--spacing);
+    padding: var(--separator);
 }
 .card-img-container{
     position: relative;
@@ -74,9 +87,7 @@ body{
 }
 .card-title {
     font-weight: var(--font-bold);
-    margin-top: var(--spacing);
-    font-size: 22px;
-    line-height: 28px;
+    margin-top: var(--separator);
     color: var(--clr-neutral-white);
     cursor: pointer;
 }
@@ -85,7 +96,7 @@ body{
 }
 
 .card-description{
-    margin-top: var(--spacing);
+    margin-top: var(--separator);
     font-weight: var(--font-light);
     color: var(--clr-primary-soft-blue);
 }
@@ -93,9 +104,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: var(--spacing);
-    font-size: 16px;
-    line-height: 20px;
+    margin-top: var(--separator);
 }
 
 .card-stats > div {
@@ -112,16 +121,14 @@ body{
     height: 2px;
     width: 100%;
     background-color: var(--clr-neutral-dark-line);
-    margin-top: var(--spacing);
+    margin-top: var(--separator);
 }
 
 .author-info{
     display: flex;
     align-items: center;
-    gap: var(--spacing-small);
-    margin-top: var(--spacing-small);
-    font-size: 16px;
-    line-height: 20px;
+    gap: var(--separator-small);
+    margin-top: var(--separator-small);
 }
 .author-info img{
     width: 33px;
@@ -141,4 +148,17 @@ body{
     position: absolute;
     bottom: 20px;
 }
-.attribution a { color: var(--clr-primary-cyan) }
+.attribution a { 
+    color: var(--clr-primary-cyan) 
+}
+
+@media (max-width : 375px) {
+    :root{
+        --card-width: 327px;
+    }
+
+    .text-small{
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
